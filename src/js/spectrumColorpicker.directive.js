@@ -57,6 +57,13 @@
         }
 
         $input.spectrum(options);
+        $input.on("reflow.spectrum", function() {
+            var container = $input.spectrum("container");
+            var offset = container.offset();
+            offset.left += options.offset.adjustLeft;
+            offset.top += options.offset.adjustTop;
+            container.offset(offset);
+        });
 
         $scope.$on('$destroy', function() {
           $input.spectrum('destroy');

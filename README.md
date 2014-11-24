@@ -19,6 +19,22 @@ To us it, put the Angular Spectrum Colorpicker directive in your html code and b
 <spectrum-colorpicker ng-model="someModel"></spectrum-colorpicker>
 ```
 
+Additional changes in this reposiory (sbarysiuk/angular-spectrum-colorpicker):
+-------------------------------------
+
+By default Spectrum Colorpicker shows a dropdown with top left alignment. There is no simple way to make it right aligned.
+
+2 additional options have been added to control popover offset. (See https://github.com/bgrins/spectrum/issues/263 for more details). 
+
+```html
+<spectrum-colorpicker ng-model="someModel" options="{
+                    offset: {
+                        adjustLeft:-96,
+                        adjustTop: 10
+                    }
+                }"></spectrum-colorpicker>
+```
+
 
 Dependencies
 ------------
